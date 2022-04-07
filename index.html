@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movie search</title>
+
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" 
+        rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <!-- <img class="header__logo" src="src/images/logo.svg" alt="logo" /> -->
+      <img class="header__word" src="images/Path1.png" alt="word_T">
+      <img class="header__pl_pau" src="images/Combined Shape1.png" alt="play">
+      <img class="header__pl_pau" src="images/Combined Shape2.png" alt="pause">
+      <img class="header__word" src="images/Path2.png" alt="word_П">
+    </header>
+    <main class="search">
+      <form class="search__form">
+        <input
+          class="search__input"
+          type="search"
+          name="search"
+          placeholder="Поиск фильмов по жанрам и актерам"
+          autocomplete="off"
+          required
+        />
+        <div class="search__tags"></div>
+      </form>
+      <div class="results">
+        <div class="results__heading"></div>
+
+        <div class="results__grid"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__heading">
+        <p>© <current-year>2019</current-year> Тинькофф Прокат</p>
+      </div>
+    </footer>
+
+    <script src="src/index.js" type="module"></script>
+  </body>
+</html>
