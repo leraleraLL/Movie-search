@@ -65,7 +65,18 @@ movieTemplate.innerHTML = `
   }
   
   .movie-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: #fff;
+  }
+
+  .movie-score {
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
   }
   
   .movie-title {
@@ -87,7 +98,8 @@ movieTemplate.innerHTML = `
       <img class="movie-image" src="" alt="poster" />
       <div class="movie-description">
         <div class="movie-rating">
-          <img class="search_score" src="images/score1.png" alt="score">
+          <img class="movie-score" src="">
+          <p class="movie-ratingNum"></p>
         </div>
         <h3 class="movie-title"></h3>
         <footer class="movie-footer">
@@ -156,9 +168,12 @@ class MovieCard extends HTMLElement {
         ).textContent = newValue);
 
       case 'rating':
+        this.shadowRoot.querySelector('.movie-rating')
+        this.shadowRoot.querySelector('.movie-score')
         return (this.shadowRoot.querySelector(
-          '.movie-rating'
+          '.movie-ratingNum'
         ).textContent = newValue);
+
 
       case 'genre':
         return (this.shadowRoot.querySelector(
