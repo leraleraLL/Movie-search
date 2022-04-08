@@ -26,8 +26,6 @@ export const createView = () => {
       movie.title = movieData.title;
       movie.year = movieData.year;
       movie.link = movieData.link;
-      movie.genre = movieData.genre;
-      movie.rating = movieData.rating;
 
       list.appendChild(movie);
     });
