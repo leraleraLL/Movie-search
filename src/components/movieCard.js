@@ -166,20 +166,6 @@ class MovieCard extends HTMLElement {
         return (this.shadowRoot.querySelector(
           '.movie-year'
         ).textContent = newValue);
-
-      case 'rating':
-        this.shadowRoot.querySelector('.movie-rating')
-        this.shadowRoot.querySelector('.movie-score')
-        return (this.shadowRoot.querySelector(
-          '.movie-ratingNum'
-        ).textContent = newValue);
-
-
-      case 'genre':
-        return (this.shadowRoot.querySelector(
-          '.movie-genre'
-        ).textContent = newValue);
-    }
   }
 }
 
