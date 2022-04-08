@@ -3,6 +3,4 @@ export const mapMovie = (movie) => ({
   year: movie.Year,
   link: `https://www.imdb.com/title/${movie.imdbID}/`,
   poster: movie.Poster,
-  genre: movie.Genre,
-  rating: movie.RatingNum
 });
