@@ -98,8 +98,7 @@ movieTemplate.innerHTML = `
       <img class="movie-image" src="" alt="poster" />
       <div class="movie-description">
         <div class="movie-rating">
-          <img class="movie-score" src="">
-          <p class="movie-ratingNum"></p>
+          <img class="movie-score" src="./images/score1.png">
         </div>
         <h3 class="movie-title"></h3>
         <footer class="movie-footer">
