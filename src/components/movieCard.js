@@ -139,7 +139,7 @@ class MovieCard extends HTMLElement {
     return params;
   }
 
-  attributeChangedCallback(param, newValue) {
+  attributeChangedCallback(param,oldValue, newValue) {
     switch (param) {
       case 'title':
         this.shadowRoot.querySelector('.movie-title').textContent = newValue;
