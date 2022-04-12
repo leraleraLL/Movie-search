@@ -31,12 +31,15 @@ export const createModel = () =>
             `http://www.omdbapi.com/?type=movie&apikey=920b7274&s=${searchTerm}`
           ).then((r) => r.json());
 
-          return data.Response === 'True'
-            ? {
-                count: data.totalResults,
-                results: data.Search.map(mapMovie),
-              }
-            : { error: data.Error };
+          if (data.Response === 'True') {  
+            return { 
+              count: data.totalResults,
+              results: data.Search.map(mapMovie)}   
+          } else {
+            return {
+              error: data.Error 
+            }
+          }
         } catch (error) {
           return { error };
         }
